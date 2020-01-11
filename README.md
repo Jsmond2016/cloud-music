@@ -52,6 +52,8 @@ npm install redux redux-thunk redux-immutable react-redux immutable --save
 
 ## 第三章 轮播组件开发
 
+### 推荐组件2 scroll 组件
+
 - css 中
 
 ```css
@@ -64,3 +66,8 @@ background: linear-gradient (hsla (0,0%,43%,.4),hsla (0,0%,100%,0));
 - useImperativeHandle ？
 - forwardRef ？
 - react-hooks 如何获取到函数组件， ref ？
+
+### 推荐模块3 数据层
+
+
+

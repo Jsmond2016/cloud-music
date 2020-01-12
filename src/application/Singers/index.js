@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+import {connect} from 'react-redux';
+import  LazyLoad, {forceCheck} from 'react-lazyload';
 import Horizen from '../../baseUI/horizen-item';
 import { categoryTypes, alphaTypes } from '../../api/config';
 import { 
@@ -17,9 +19,7 @@ import {
   changePullDownLoading, 
   refreshMoreHotSingerList 
 } from './store/actionCreators';
-import  LazyLoad, {forceCheck} from 'react-lazyload';
 import Scroll from './../../baseUI/scroll/index';
-import {connect} from 'react-redux';
 import Loading from '../../baseUI/loading';
 
 function Singers(props) {

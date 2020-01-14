@@ -34,9 +34,16 @@ export default [
         component: Singers
       },
       {
-        path: "/rank",
-        component: Rank
-      }
+        path: "/rank/",
+        component: Rank,
+        key: "rank",
+        routes: [
+          {
+            path: "/rank/:id",
+            component: Album
+          }
+        ]
+      },
     ]
   }
 ]

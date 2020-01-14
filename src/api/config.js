@@ -2,15 +2,15 @@ import axios from 'axios';
 
 export const baseUrl = 'http://localhost:4000';
 
-//axios 的实例及拦截器配置
-const axiosInstance = axios.create ({
+// axios的实例及拦截器配置
+const axiosInstance = axios.create({
   baseURL: baseUrl
 });
 
-axiosInstance.interceptors.response.use (
+axiosInstance.interceptors.response.use(
   res => res.data,
   err => {
-    console.log (err, "网络错误");
+    console.log(err, "网络错误");
   }
 );
 
@@ -18,7 +18,7 @@ export {
   axiosInstance
 };
 
-// 歌手种类
+//歌手种类
 export const categoryTypes = [{
   name: "华语男",
   key: "1001"
@@ -81,111 +81,111 @@ export const categoryTypes = [{
 },
 ];
 
-// 歌手首字母
+//歌手首字母
 export const alphaTypes = [{
-    key: "A",
-    name: "A"
-  },
-  {
-    key: "B",
-    name: "B"
-  },
-  {
-    key: "C",
-    name: "C"
-  },
-  {
-    key: "D",
-    name: "D"
-  },
-  {
-    key: "E",
-    name: "E"
-  },
-  {
-    key: "F",
-    name: "F"
-  },
-  {
-    key: "G",
-    name: "G"
-  },
-  {
-    key: "H",
-    name: "H"
-  },
-  {
-    key: "I",
-    name: "I"
-  },
-  {
-    key: "J",
-    name: "J"
-  },
-  {
-    key: "K",
-    name: "K"
-  },
-  {
-    key: "L",
-    name: "L"
-  },
-  {
-    key: "M",
-    name: "M"
-  },
-  {
-    key: "N",
-    name: "N"
-  },
-  {
-    key: "O",
-    name: "O"
-  },
-  {
-    key: "P",
-    name: "P"
-  },
-  {
-    key: "Q",
-    name: "Q"
-  },
-  {
-    key: "R",
-    name: "R"
-  },
-  {
-    key: "S",
-    name: "S"
-  },
-  {
-    key: "T",
-    name: "T"
-  },
-  {
-    key: "U",
-    name: "U"
-  },
-  {
-    key: "V",
-    name: "V"
-  },
-  {
-    key: "W",
-    name: "W"
-  },
-  {
-    key: "X",
-    name: "X"
-  },
-  {
-    key: "Y",
-    name: "Y"
-  },
-  {
-    key: "Z",
-    name: "Z"
-  }
+  key: "A",
+  name: "A"
+},
+{
+  key: "B",
+  name: "B"
+},
+{
+  key: "C",
+  name: "C"
+},
+{
+  key: "D",
+  name: "D"
+},
+{
+  key: "E",
+  name: "E"
+},
+{
+  key: "F",
+  name: "F"
+},
+{
+  key: "G",
+  name: "G"
+},
+{
+  key: "H",
+  name: "H"
+},
+{
+  key: "I",
+  name: "I"
+},
+{
+  key: "J",
+  name: "J"
+},
+{
+  key: "K",
+  name: "K"
+},
+{
+  key: "L",
+  name: "L"
+},
+{
+  key: "M",
+  name: "M"
+},
+{
+  key: "N",
+  name: "N"
+},
+{
+  key: "O",
+  name: "O"
+},
+{
+  key: "P",
+  name: "P"
+},
+{
+  key: "Q",
+  name: "Q"
+},
+{
+  key: "R",
+  name: "R"
+},
+{
+  key: "S",
+  name: "S"
+},
+{
+  key: "T",
+  name: "T"
+},
+{
+  key: "U",
+  name: "U"
+},
+{
+  key: "V",
+  name: "V"
+},
+{
+  key: "W",
+  name: "W"
+},
+{
+  key: "X",
+  name: "X"
+},
+{
+  key: "Y",
+  name: "Y"
+},
+{
+  key: "Z",
+  name: "Z"
+}
 ];
 
 //排行榜编号
@@ -215,3 +215,6 @@ export const RankTypes = {
   "22": "云音乐ACG音乐榜",
   "23": "江小白YOLO云音乐说唱榜"
 };
+
+//顶部的高度
+export const HEADER_HEIGHT = 45;

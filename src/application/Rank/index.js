@@ -10,7 +10,7 @@ import {
 } from './style';
 import Scroll from '../../baseUI/scroll/index';
 import { EnterLoading } from './../Singers/style';
-import { filterIndex, filterIdx } from '../../api/utils';
+import { filterIndex } from '../../api/utils';
 import { renderRoutes } from 'react-router-config';
 
 function Rank(props) {

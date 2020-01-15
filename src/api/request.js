@@ -1,11 +1,11 @@
 import { axiosInstance } from "./config";
 
 export const getBannerRequest = () => {
-  return axiosInstance.get ('/banner');
+  return axiosInstance.get('/banner');
 }
 
 export const getRecommendListRequest = () => {
-  return axiosInstance.get ('/personalized');
+  return axiosInstance.get('/personalized');
 }
 
 export const getHotSingerListRequest = (count) => {
@@ -17,7 +17,7 @@ export const getSingerListRequest= (category, alpha, count) => {
 }
 
 export const getRankListRequest = () => {
-  return axiosInstance.get (`/toplist/detail`);
+  return axiosInstance.get(`/toplist/detail`);
 };
 
 export const getAlbumDetailRequest = id => {
@@ -26,4 +26,8 @@ export const getAlbumDetailRequest = id => {
 
 export const getSingerInfoRequest = id => {
   return axiosInstance.get(`/artists?id=${id}`);
+};
+
+export const getLyricRequest = id => {
+  return axiosInstance.get(`/lyric?id=${id}`);
 };

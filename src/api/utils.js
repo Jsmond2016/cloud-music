@@ -1,5 +1,3 @@
-import { RankTypes } from "./config";
-
 export const getCount = (count) => {
   if(count < 0) return;
   if(count < 10000) {
@@ -33,13 +31,6 @@ export const filterIndex = rankList => {
   }
 };
 
-//找出排行榜的编号
-export const filterIdx = name => {
-  for (var key in RankTypes) {
-    if (RankTypes[key] === name) return key;
-  }
-  return null;
-};
 //处理歌手列表拼接歌手名字
 export const getName = list => {
   let str = "";
@@ -53,11 +44,19 @@ export const getName = list => {
 //判断一个对象是否为空
 export const isEmptyObject = obj => !obj || Object.keys(obj).length === 0;
 
-// 给 css3 相关属性增加浏览器前缀，处理浏览器兼容性问题
-let elementStyle = document.createElement ("div").style;
+//转换歌曲播放时间
+export const formatPlayTime = interval => {
+  interval = interval | 0;
+  const minute = (interval / 60) | 0;
+  const second = (interval % 60).toString().padStart(2, "0");
+  return `${minute}:${second}`;
+};
+
+// 给css3相关属性增加浏览器前缀，处理浏览器兼容性问题
+let elementStyle = document.createElement("div").style;
 
 let vendor = (() => {
-  // 首先通过 transition 属性判断是何种浏览器
+  //首先通过transition属性判断是何种浏览器
   let transformNames = {
     webkit: "webkitTransform",
     Moz: "MozTransform",
@@ -65,22 +64,22 @@ let vendor = (() => {
     ms: "msTransform",
     standard: "Transform"
   };
-  for (let key in transformNames) {
-    if (elementStyle [transformNames [key]] !== undefined) {
+  for (var key in transformNames) {
+    if (elementStyle[transformNames[key]] !== undefined) {
       return key;
     }
   }
   return false;
 })();
 
-export function prefixStyle (style) {
+export function prefixStyle(style) {
   if (vendor === false) {
     return false;
   }
   if (vendor === "standard") {
     return style;
   }
-  return vendor + style.charAt (0).toUpperCase () + style.substr (1);
+  return vendor + style.charAt(0).toUpperCase() + style.substr(1);
 }
 
 //拼接出歌曲的url链接
@@ -111,12 +110,4 @@ export const findIndex = (song, list) => {
   return list.findIndex(item => {
     return song.id === item.id;
   });
-};
-
-//转换歌曲播放时间
-export const formatPlayTime = interval => {
-  interval = interval | 0;
-  const minute = (interval / 60) | 0;
-  const second = (interval % 60).toString().padStart(2, "0");
-  return `${minute}:${second}`;
 };

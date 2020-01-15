@@ -1,28 +1,28 @@
 import React from 'react';
-import styled from'styled-components';
+import styled from 'styled-components';
 import style from '../../assets/global-style';
 
 const CircleWrapper = styled.div`
   position: relative;
-  circle {
+  circle{
     stroke-width: 8px;
     transform-origin: center;
-    &.progress-background {
-      transform: scale (0.9);
+    &.progress-background{
+      transform: scale(0.9);
       stroke: ${style["theme-color-shadow"]};
     }
-    &.progress-bar {
-      transform: scale (0.9) rotate (-90deg);
+    &.progress-bar{
+      transform: scale(0.9) rotate(-90deg);
       stroke: ${style["theme-color"]};
     }
   }
 `
 
-function ProgressCircle (props) {
+function ProgressCircle(props) {
   const {radius, percent} = props;
-  // 整个背景的周长
+  //整个背景的周长
   const dashArray = Math.PI * 100;
-  // 没有高亮的部分，剩下高亮的就是进度
+  //没有高亮的部分，剩下高亮的就是进度
   const dashOffset = (1 - percent) * dashArray;
 
   return (
@@ -38,4 +38,4 @@ function ProgressCircle (props) {
   )
 }
 
-export default React.memo (ProgressCircle);
+export default React.memo(ProgressCircle);

@@ -1,12 +1,12 @@
-//routes/index.js
 import React from 'react';
 import { Redirect } from "react-router-dom";
-import Home from '../application/Home';
 import Recommend from '../application/Recommend';
 import Singers from '../application/Singers';
 import Rank from '../application/Rank';
+import Home from '../application/Home';
 import Album from '../application/Album';
 import Singer from '../application/Singer';
+import Search from '../application/Search';
 
 export default [
   {
@@ -21,7 +21,7 @@ export default [
         )
       },
       {
-        path: "/recommend",
+        path: "/recommend/",
         component: Recommend,
         routes: [
           {
@@ -33,10 +33,9 @@ export default [
       {
         path: "/singers",
         component: Singers,
-        key: "singers",
         routes: [
           {
-            path: "/singers/:id",
+            path: '/singers/:id',
             component: Singer
           }
         ]
@@ -52,6 +51,18 @@ export default [
           }
         ]
       },
+      {
+        path: "/album/:id",
+        exact: true,
+        key: "album",
+        component: Album
+      },
+      {
+        path: "/search",
+        exact: true,
+        key: "search",
+        component: Search
+      }
     ]
   }
 ]

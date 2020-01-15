@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { SliderContainer } from './style';
-import Swiper from "swiper";
 import "swiper/css/swiper.min.css";
+import Swiper from "swiper";
 
 function Slider(props) {
   const [sliderSwiper, setSliderSwiper] = useState(null);

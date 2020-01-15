@@ -29,10 +29,10 @@ const MusicNote = forwardRef((props, ref) => {
   const transform = prefixStyle("transform");
 
   const createNode = (txt) => {
-    const template = `<div class='icon_wrapper'>${txt}</div>`;
-    let tempNode = document.createElement('div');
-    tempNode.innerHTML = template;
-    return tempNode.firstChild;
+    const template = `<div class='icon_wrapper'>${txt}</div>`;
+    let tempNode = document.createElement('div');
+    tempNode.innerHTML = template;
+    return tempNode.firstChild;
   }
 
   useEffect(() => {
@@ -87,3 +87,4 @@ const MusicNote = forwardRef((props, ref) => {
 })
 
 export default React.memo(MusicNote);
+

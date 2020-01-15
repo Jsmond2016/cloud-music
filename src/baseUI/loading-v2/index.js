@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {keyframes} from'styled-components';
+import styled, {keyframes} from 'styled-components';
 import style from '../../assets/global-style'
 
 const dance = keyframes`
@@ -17,7 +17,7 @@ const Loading = styled.div`
     margin: auto;
     text-align: center;
     font-size: 10px;
-    >div {
+    >div{
       display: inline-block;
       background-color: ${style["theme-color"]};
       height: 100%;
@@ -40,7 +40,7 @@ const Loading = styled.div`
 
 `
 
-function LoadingV2 () {
+function LoadingV2() {
   return (
     <Loading>
       <div></div>
@@ -48,9 +48,9 @@ function LoadingV2 () {
       <div></div>
       <div></div>
       <div></div>
-      <span > 拼命加载中...</span>
+      <span>拼命加载中...</span>
     </Loading>
   );
 }
  
-export default React.memo (LoadingV2);
+export default React.memo(LoadingV2);
